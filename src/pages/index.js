@@ -1,0 +1,6 @@
+export {default as Home} from './Home/Home'
+export {default as CurrencyConverter} from './CurrencyConverter/CurrencyConverter'
+export {default as Contact} from './Contact/Contact'
+export {default as Projects} from './Projects/Projects'
+export {default as Terms} from './Terms_of_service/Terms'
+export {default as Privacy} from './Privacy_policy/Privacy'
