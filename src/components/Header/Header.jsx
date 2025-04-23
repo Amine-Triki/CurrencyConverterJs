@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <> 
-    <nav  className="navbar navbar-expand-lg sticky-top text-info "  style={{ backgroundColor: '#ffc0cb' }}> 
+    <nav  className="navbar navbar-expand-lg sticky-top text-info "  style={{ backgroundColor: '#b388ff' }}> 
           <div className="container">
             <Link  to="/" className="navbar-brand" ><h1>Amine Triki</h1></Link>
             <button className="navbar-toggler" 

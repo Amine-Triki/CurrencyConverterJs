@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import "./CurrencyConverter.css" ;
 const CurrencyConverter = () => {
   const [amount1, setAmount1] = useState(1);
   const [amount2, setAmount2] = useState(0);
@@ -23,7 +23,7 @@ const CurrencyConverter = () => {
     };
 
     fetchRates();
-  }, [currency1]);
+  }, [currency1 , API_KEY]);
 
   useEffect(() => {
     if (rates[currency2]) {
@@ -48,9 +48,9 @@ const CurrencyConverter = () => {
 
   return (
     <main>
-    <div className="converter">
+    <div className="converter d-flex align-items-center justify-content-center flex-column mt-5">
       <h2>Currency Converter</h2>
-      <div className="input-group">
+      <div className="input-group  justify-content-center">
         <input type="number" value={amount1} onChange={handleAmount1Change} />
         <select value={currency1} onChange={(e) => setCurrency1(e.target.value)}>
           {Object.keys(rates).map((currency) => (
@@ -61,7 +61,7 @@ const CurrencyConverter = () => {
         </select>
       </div>
 
-      <div className="input-group">
+      <div className="input-group  justify-content-center">
         <input type="number" value={amount2} onChange={handleAmount2Change} />
         <select value={currency2} onChange={(e) => setCurrency2(e.target.value)}>
           {Object.keys(rates).map((currency) => (

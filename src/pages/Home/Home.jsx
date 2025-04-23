@@ -30,7 +30,7 @@ const home = () => {
               href="https://mega.nz/file/XUt13JrK#htwbQSx2cPZoiB3NImWTzMJ-2N-Rg4gtcCOy9wFherE"
               target="_blank"
               rel="noreferrer"
-              style={{ backgroundColor: "#ffc0cb" }}
+              style={{ backgroundColor: "#b388ff" }}
             >
               download resume
             </a>
