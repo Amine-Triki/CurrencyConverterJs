@@ -62,9 +62,11 @@ const Projects = () => {
                           Github
                           </a>
                           )}
+                          {project.link !== '' && (
                           <a href={project.link} className="btn" rel="noreferrer" target="_blank" style={{ backgroundColor: '#BFECFF' }}>
                           Preview
                           </a>
+                          )}
                         </div>
                       </div>
                     </div>
