@@ -51,7 +51,7 @@ const Projects = () => {
                 .filter((project) => activeCategory === 'all' || project.category === activeCategory)
                 .map((project, index) => (
                   <div className={`post ${project.category} mb-3`} key={index}>
-                    <div className="card" style={{ width: '18rem' }}>
+                    <div className="card h-100" style={{ width: '18rem' }}>
                       <img src={project.imageSrc} className="card-img-top" alt={project.title} />
                       <div className="card-body">
                         <h5 className="card-title text-info">{project.title}</h5>
