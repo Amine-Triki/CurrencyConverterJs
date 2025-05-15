@@ -9,7 +9,7 @@ const manifestForPlugin = {
   manifest: {
     name: "Weather app",
     short_name: "Weather app",
-    description: "An app that can show the weather forecast for your city.",
+    description: "An app that can show the ",
     icons: [
       
       {
