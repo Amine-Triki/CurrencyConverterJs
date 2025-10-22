@@ -25,11 +25,11 @@ const Projects = () => {
 
   const categories = [
     { key: 'all', label: 'All works' },
-    { key: 'Vue-js', label: 'Vue js' },
     { key: 'JavaScript', label: 'JavaScript' },
     { key: 'Wordpress', label: 'Wordpress' },
     { key: 'React', label: 'React' },
     { key: 'NextJs', label: 'NextJs' },
+    { key: 'vue', label: 'Vue' },
   ];
 
   if (loading) {
@@ -50,7 +50,7 @@ const Projects = () => {
             <h2>My Projects</h2>
             <p>What I build</p>
           </div>
-          <ul className="switcher bg-warning text-white d-flex flex-row py-3 justify-content-around px-0 flex-wrap sm:flex-column">
+          <ul className="switcher bg-warning text-white d-flex flex-column flex-md-row py-3 justify-content-around px-2 flex-wrap ">
             {categories.map(({ key, label }) => (
               <li
                 key={key}
