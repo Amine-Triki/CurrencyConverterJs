@@ -5,7 +5,8 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 
 import './App.css';
 import { Header, Footer } from './components/index';
-import { Home, CurrencyConverter, Projects, Contact, Privacy, Terms } from './pages/index';
+import { Home, CurrencyConverter, Projects, Contact,   } from './pages/index';
+import { NotFound } from './pages/NotFound';
 
 // 🏠 إنشاء تخطيط عام يحتوي على الهيدر والفوتر
 const Layout = () => (
@@ -26,8 +27,7 @@ const router = createBrowserRouter([
       { path: "/currencyConverter", element: <CurrencyConverter /> },
       { path: "/contact", element: <Contact /> },
       { path: "/projects", element: <Projects /> },
-      { path: "/privacy", element: <Privacy /> },
-      { path: "/terms", element: <Terms /> },
+      { path: "*", element: <NotFound /> },
     ],
   },
 ]);
