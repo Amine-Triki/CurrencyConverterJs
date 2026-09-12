@@ -31,12 +31,11 @@
 }
 
 .switcher {
-    list-style: none;
     gap: 0.6rem;
     padding-left: 0;
 }
 
-.switcher li {
+.switcher .nav-link {
     background: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(18, 38, 58, 0.13);
     color: #2f4357;
@@ -46,24 +45,24 @@
     transition: all 0.2s ease;
 }
 
-.switcher li:hover {
+.switcher .nav-link:hover {
     transform: translateY(-1px);
     border-color: #0f766e;
     color: #0f766e;
 }
 
-.switcher li.active {
+.switcher .nav-link.active {
     background: linear-gradient(120deg, #0f766e, #149a90);
     color: #fff;
     border-color: transparent;
     box-shadow: 0 8px 18px rgba(15, 118, 110, 0.3);
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 320px));
-    justify-content: center;
-    gap: 1.35rem;
+.projects-group-title {
+    color: #123454;
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
 }
 
 .project-card {
@@ -100,6 +99,10 @@
     object-fit: cover;
 }
 
+.project-card-featured .project-image {
+    height: 235px;
+}
+
 .project-category-badge {
     position: absolute;
     top: 0.8rem;
@@ -113,6 +116,18 @@
     padding: 0.26rem 0.62rem;
 }
 
+.project-featured-badge {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    background: #ff6a3a;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 0.26rem 0.62rem;
+}
+
 .project-title {
     color: #123454;
     font-weight: 700;
@@ -120,6 +135,39 @@
 
 .project-description {
     color: #4a6077;
+}
+
+.project-technologies,
+.project-variants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.project-variant {
+    display: inline-flex;
+    align-items: center;
+}
+
+.project-stack-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    text-decoration: none;
+}
+
+.project-stack-badge svg {
+    font-size: 0.62rem;
+}
+
+.project-github-icon {
+    color: #12263a;
+    padding: 0.2rem 0.35rem;
+}
+
+.project-github-icon:hover {
+    color: #0f766e;
 }
 
 .project-actions {
@@ -135,6 +183,10 @@
 
 .project-btn:hover {
     transform: translateY(-1px);
+}
+
+.project-btn svg {
+    margin-right: 0.35rem;
 }
 
 .project-btn-code {
@@ -182,6 +234,41 @@
     height: 2.4rem;
 }
 
+.gallery-main-image {
+    display: block;
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    background: #f4f1eb;
+}
+
+.gallery-thumbnails {
+    display: flex;
+    gap: 0.65rem;
+    overflow-x: auto;
+    padding: 0.85rem 0.1rem 0.15rem;
+}
+
+.gallery-thumbnail {
+    flex: 0 0 86px;
+    height: 62px;
+    padding: 0;
+    border: 2px solid transparent;
+    background: transparent;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.gallery-thumbnail.active {
+    border-color: #0f766e;
+}
+
+.gallery-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 @keyframes project-fade-up {
     from {
         opacity: 0;
@@ -195,8 +282,12 @@
 }
 
 @media (max-width: 576px) {
-    .switcher li {
+    .switcher .nav-item {
         width: 100%;
+    }
+
+    .switcher .nav-link {
+        text-align: center;
     }
 
     .project-image {
